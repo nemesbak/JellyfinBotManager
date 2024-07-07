@@ -1,18 +1,24 @@
 # JellyfinBotManager
  Script Python para controlar el manejo de usuarios con bot de telegram
 
-###Dependencias a Instalar
+### Dependencias a Instalar
 Esta es una biblioteca de Python para interactuar con la API de Telegram. Se puede instalar usando pip:
-`pip install python-telegram-bot`
+```
+pip install python-telegram-bot
+```
 
 Para realizar solicitudes HTTP a la API de Jellyfin. Se puede instalar usando pip:
-`pip install requests`
+```
+pip install requests
+```
 
 Aiohttp (opcional, pero usado en el script):
 Para manejar solicitudes asíncronas de manera eficiente. Se puede instalar usando pip:
-`pip install aiohttp`
+```
+pip install aiohttp
+```
 
-###Configuración del Script
+### Configuración del Script
 Antes de ejecutar el script, asegúrate de configurar correctamente los siguientes parámetros dentro del código:
 
 JELLYFIN_URL: URL de tu servidor Jellyfin.
@@ -22,21 +28,28 @@ JELLYFIN_ADMIN_PASSWORD: Contraseña del administrador de Jellyfin.
 TELEGRAM_TOKEN: Token del bot de Telegram que obtienes al crear un nuevo bot con el BotFather.
 
 
-####Ejecución del Bot
+#### Ejecución del Bot
 Una vez que hayas configurado las dependencias y los parámetros, puedes ejecutar el bot:
 Ejecuta el script Python en tu entorno local:
-`python nombre_del_script.py`
+```
+python nombre_del_script.py
+```
 
 
-###Uso del Bot en Telegram
+### Uso del Bot en Telegram
 Una vez que el bot está en funcionamiento, puedes interactuar con él a través de comandos en Telegram:
+> /start: Inicia la conversación y muestra los comandos disponibles.
+>
+> /crear_usuario: Comienza el proceso para crear un nuevo usuario en Jellyfin.
+>
+> /modificar: Permite modificar parámetros de un usuario existente.
+>
+> /password: Cambia la contraseña de un usuario.
+>
+> /borrar: Elimina un usuario existente.
+>
+> /estado: Muestra el estado actual de todos los usuarios y permite realizar acciones adicionales mediante botones interactivos.
 
->/start: Inicia la conversación y muestra los comandos disponibles.
-/crear_usuario: Comienza el proceso para crear un nuevo usuario en Jellyfin.
-/modificar: Permite modificar parámetros de un usuario existente.
-/password: Cambia la contraseña de un usuario.
-/borrar: Elimina un usuario existente.
-/estado: Muestra el estado actual de todos los usuarios y permite realizar acciones adicionales mediante botones interactivos.
 
 Notas Adicionales
 Asegúrate de tener correctamente configurados los permisos y la configuración de Jellyfin para que el bot funcione correctamente.
@@ -53,7 +66,7 @@ Este bot maneja la autenticación, creación de usuarios, modificación de polí
 
 
 
-Descripción del Repositorio:
+## *Descripción del Repositorio:*
 
 Este repositorio alberga un bot de Telegram diseñado para gestionar usuarios de Jellyfin de manera eficiente. El bot permite realizar diversas acciones administrativas y facilita la gestión de usuarios en tu servidor Jellyfin directamente desde Telegram.
 
