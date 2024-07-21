@@ -1,41 +1,60 @@
+### Version 2.0 de un bot simple para manejo de usuarios a traves de telegram
+
+-------------------------------------------------------------
+## Uso con Docker Compose
+1. Clona este repositorio
+2. Ajusta las variables en `docker-compose.yml` según sea necesario
+3. Ejecuta `docker-compose up -d`
+
+## Uso con Docker
+1. Clona este repositorio
+2. Crea un archivo `.env` con las variables necesarias
+3. Construye la imagen:
+```
+`docker build -t jfa-bot .`
+```
+4. Ejecuta el contenedor:
+```
+`docker run --env-file .env -d jfa-bot`
+```
+------------------------------------------------------------
+## Use with Docker Compose
+1. Clone this repository
+```
+git clone https://github.com/nemesbak/jellyfinbotmanager
+cd jellyfinbotmanager
+```
+2. Adjust variables in `docker-compose.yml` as needed
+3. Run
+```
+`docker-compose up -d`
+```
+
+## Use with Docker
+1. Clone this repository
+2. Create a `.env` file with the necessary variables
+3. Build the image: ``` `docker build -t jfa-bot .` ```
+4. Run the container: ``` `docker run --env-file .env -d jfa-bot` ```
+
+-------------------------------------------------------------
 # JellyfinBotManager
  Script Python para controlar el manejo de usuarios con bot de telegram
 
-### Dependencias a Instalar
-Esta es una biblioteca de Python para interactuar con la API de Telegram. Se puede instalar usando pip:
-```
-pip install python-telegram-bot
-```
-
-Para realizar solicitudes HTTP a la API de Jellyfin. Se puede instalar usando pip:
-```
-pip install requests
-```
-
-Aiohttp (opcional, pero usado en el script):
-Para manejar solicitudes asíncronas de manera eficiente. Se puede instalar usando pip:
-```
-pip install aiohttp
-```
-
 ### Configuración del Script
-Antes de ejecutar el script, asegúrate de configurar correctamente los siguientes parámetros dentro del código:
+Antes de ejecutar el script, asegúrate de configurar correctamente el .env en los siguientes parámetros dentro del código:
 
 - **JELLYFIN_URL**: URL de tu servidor Jellyfin.
 - **JELLYFIN_API_KEY**: API Key de Jellyfin utilizada para la autenticación.
 - **JELLYFIN_ADMIN_USERNAME**: Nombre de usuario del administrador de Jellyfin.
 - **JELLYFIN_ADMIN_PASSWORD**: Contraseña del administrador de Jellyfin.
 - **TELEGRAM_TOKEN**: Token del bot de Telegram que se obtiene al crear un nuevo bot con el BotFather.
+- **JELLYFIN_LOGO_URL:** Puedes personalizar mensaje bienvenida para que muestre un logo o imagen personalizada
 
 
 
-#### Ejecución del Bot
-Una vez que hayas configurado las dependencias y los parámetros, puedes ejecutar el bot:
-Ejecuta el script Python en tu entorno local:
-```
-python nombre_del_script.py
-```
-
+#### Sugerencias
+Si tienes alguna sugerencia, mejora, critica o simplemente puedes corregir y mejorar algo adelante, puedes contactarme por telegram @nemesfpv
+y comentarme lo que sea :)
 
 ### Uso del Bot en Telegram
 Una vez que el bot está en funcionamiento, puedes interactuar con él a través de comandos en Telegram:
@@ -43,14 +62,9 @@ Una vez que el bot está en funcionamiento, puedes interactuar con él a través
 >
 > /crear_usuario: Comienza el proceso para crear un nuevo usuario en Jellyfin.
 >
-> /modificar: Permite modificar parámetros de un usuario existente.
->
 > /password: Cambia la contraseña de un usuario.
 >
 > /borrar: Elimina un usuario existente.
->
-> /estado: Muestra el estado actual de todos los usuarios y permite realizar acciones adicionales mediante botones interactivos.
-
 
 
 ## Notas Adicionales
