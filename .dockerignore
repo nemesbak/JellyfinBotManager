@@ -1,0 +1,6 @@
+# Ignora archivos y directorios no deseados
+.env
+*.pyc
+__pycache__/
+logs/
+config
