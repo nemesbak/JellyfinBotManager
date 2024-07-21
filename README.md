@@ -1,7 +1,7 @@
 ### Version 2.0 de un bot simple para manejo de usuarios a traves de telegram
 
 -------------------------------------------------------------
-## Uso con Docker Compose
+## Uso con Docker Compose en local
 1. Clona este repositorio
 2. Ajusta las variables en `docker-compose.yml` según sea necesario
 3. Ejecuta `docker-compose up -d`
@@ -18,7 +18,7 @@
 `docker run --env-file .env -d jfa-bot`
 ```
 ------------------------------------------------------------
-## Use with Docker Compose
+## Use with Docker Compose on local
 1. Clone this repository
 ```
 git clone https://github.com/nemesbak/jellyfinbotmanager
@@ -37,6 +37,26 @@ cd jellyfinbotmanager
 4. Run the container: ``` `docker run --env-file .env -d jfa-bot` ```
 
 -------------------------------------------------------------
+## Use with Docker Compose Online
+```
+version: '3.8'
+services:
+  bot:
+    image: nemesbak/jfa-bot:latest
+    container_name: jfa-bot
+    environment:
+      - TELEGRAM_TOKEN=
+      - JELLYFIN_URL=
+      - JELLYFIN_API_KEY=
+      - JELLYFIN_ADMIN_USERNAME=
+      - JELLYFIN_ADMIN_PASSWORD=
+      - JELLYFIN_LOGO_URL=
+    restart: unless-stopped
+    volumes:
+      - /patch/of/config:/app/config
+      - /patch/of/config:/app/logs
+```
+-----------------------------------------------------------
 # JellyfinBotManager
  Script Python para controlar el manejo de usuarios con bot de telegram
 
