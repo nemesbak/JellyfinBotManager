@@ -1,0 +1,12 @@
+services:
+  jfa-bot:
+    build: .
+    container_name: jellyfin-users
+    environment:
+      - TELEGRAM_TOKEN=Token_Bot
+      - JELLYFIN_URL=url_server
+      - JELLYFIN_API_KEY=jellyfin_api-key
+      - JELLYFIN_ADMIN_USERNAME=user_admin
+      - JELLYFIN_ADMIN_PASSWORD=password_admin
+      - JELLYFIN_LOGO_URL="URL_image_for_initial_message_bot"
+    restart: unless-stopped
